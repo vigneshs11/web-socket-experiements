@@ -5,7 +5,7 @@ const cors = require("cors")
 const httpServer = http.createServer();
 const io = new Server(httpServer, {
     cors: {
-        origin: "https://websocketexperiements-o1py--3001--a9c8a5a3.local-credentialless.webcontainer.io", // Replace with your frontend URL
+        origin: "*", // Replace with your frontend URL
         methods: ["GET", "POST"],
         allowedHeaders: ["*"],
         credentials: true,
