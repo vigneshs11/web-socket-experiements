@@ -5,9 +5,9 @@ const cors = require("cors")
 const httpServer = http.createServer();
 const io = new Server(httpServer, {
     cors: {
-        origin: "http://localhost:3000", // Replace with your frontend URL
+        origin: "https://websocketexperiements-o1py--3001--a9c8a5a3.local-credentialless.webcontainer.io", // Replace with your frontend URL
         methods: ["GET", "POST"],
-        allowedHeaders: ["my-custom-header"],
+        allowedHeaders: ["*"],
         credentials: true,
     }});
 
@@ -28,7 +28,7 @@ const io = new Server(httpServer, {
           console.log("A user disconnected:", socket.id);
         });
       });
-      
+
       const PORT = process.env.PORT || 3001;
       httpServer.listen(PORT, () => {
         console.log(`Socket.io server is running on port ${PORT}`);
